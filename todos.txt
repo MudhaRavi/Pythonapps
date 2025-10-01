@@ -1,0 +1,5 @@
+prepare
+eat
+start
+read
+bath
