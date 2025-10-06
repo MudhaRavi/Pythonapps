@@ -1,5 +1,3 @@
-prepare
-eat
-start
+eat your food
+start the game
 read
-bath
