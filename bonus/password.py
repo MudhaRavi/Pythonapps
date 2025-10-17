@@ -1,4 +1,4 @@
-# from unicodedata import digit
+# Password strength checker
 #
 # password = input("Enter your password: ")
 # result = {}

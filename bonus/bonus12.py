@@ -1,17 +1,16 @@
-
+from bonus12_function import parse_input , convert
 
 feet_inches = input("Enter feet and inches ")
 
-def convert(feet_inches):
-    parts = feet_inches.split(" ")
-    feet = float(parts[0])
-    inches = float(parts[1])
-    meters = feet * 0.3048 + inches * 0.0254
-    return meters
 
-result_total = convert(feet_inches)
+
+f,i = parse_input(feet_inches)
+
+print(f,i)
+result_total = convert(f, i)
 
 if result_total < 1:
     print("Less than a meter")
 else:
     print(result_total)
+
