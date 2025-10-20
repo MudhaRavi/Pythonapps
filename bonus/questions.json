@@ -1,0 +1,6 @@
+ [{"question_text": "What is the dolphins?",
+  "alternates" : ["Reptile", "Bird", "Mammal", "Fish"],
+"correct_answer": 3},
+ {"question_text": "What is the capital of France?",
+  "alternates" : ["Berlin", "Madrid", "India", "Paris"],
+  "correct_answer": 4}]
