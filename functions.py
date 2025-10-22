@@ -1,5 +1,5 @@
 # Function to get todos from a file
-def get_todos(file_path = "todo.txt"): #param file_path
+def get_todos(file_path = "todos.txt"): #param file_path
     with open(file_path, "r") as file_local:
         todos_local = file_local.readlines()
     return todos_local
