@@ -1,13 +1,28 @@
+# NOTE: This script runs only on your local IDE
+import FreeSimpleGUI as sg
+from meters import convert
 
-import FreeSimpleGUI as fsg
+feet_label = sg.Text("Enter feet: ")
+feet_input = sg.Input(key="feet")
 
-label1 = fsg.Text('Enter the feet: ')
-input_box1 = fsg.InputText()
-label2 = fsg.Text('Enter the inches: ')
-input_box2 = fsg.InputText()
-convert_button = fsg.Button('Convert')
+inches_label = sg.Text("Enter inches: ")
+inches_input = sg.Input(key="inches")
 
-window = fsg.Window("Feet and Inches to Centimeters Converter",
-                    layout=[[label1, input_box1], [label2, input_box2], [convert_button]])
-window.read()
+button = sg.Button("Convert")
+output_label = sg.Text("", key="output")
+
+window = sg.Window("Convertor",
+                   layout=[[feet_label, feet_input],
+                           [inches_label, inches_input],
+                           [button, output_label]])
+
+while True:
+    event, values = window.read()
+    feet = float(values["feet"])
+    inches = float(values["inches"])
+
+    result = convert(feet, inches)
+    window["output"].update(value=f"{result} m", text_color="white")
+
+
 window.close()
